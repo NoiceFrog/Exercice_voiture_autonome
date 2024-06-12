@@ -26,7 +26,6 @@ void init();
 void draw_car();
 void process_movement();
 void update();
-
 WINDOW* win;
 
 vec2 car = { 25, 20};
