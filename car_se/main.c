@@ -10,17 +10,20 @@
 
 #define FRAME_TIME 110000
 
+// CRÉE PAR ALEX LE BOSS DE LA 9VG4
+
+
 typedef struct {
     int x;
     int y;
 } vec2;
 
-bool collide(vec2 a, vec2 b) {
+/* bool collide(vec2 a, vec2 b) {
     if (a.x == b.x && a.y == b.y) {
         return true;
     }  
     else return false;
-};
+}; */
 
 void init();
 void draw_car();
@@ -60,9 +63,7 @@ void init() {
   start_color();
   use_default_colors();
   init_pair(1, COLOR_RED, -1);
-  init_pair(2, COLOR_GREEN, -1);
-  init_pair(3, COLOR_YELLOW, -1);
-  init_pair(4, COLOR_BLUE, -1);
+  init_pair(2, COLOR_BLUE, -1);
 };
 
 void process_movement() {
@@ -105,7 +106,7 @@ void draw_car() {
     mvaddch(car.y, car.x, '@');
     attroff(COLOR_PAIR(1));
 
-    attron(COLOR_PAIR(4));
-    draw_border(0, 0, screen_width, screen_height); // love iron maiden <3
-    attroff(COLOR_PAIR(4));
-}
+    attron(COLOR_PAIR(2));
+    draw_border(0, 0, screen_width, screen_height);
+    attroff(COLOR_PAIR(2));
+};
